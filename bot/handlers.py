@@ -3,12 +3,14 @@ from aiogram import F, Bot
 from aiogram.types import Message
 from aiogram import Router
 from aiogram.fsm.context import FSMContext
+from aiogram.types.callback_query import CallbackQuery
 import bot.keyboards as kb
-import bot.database.db as db
+import bot.db as db
 import bot.services.google_api_service as google_disk
 from bot.states import *
 from bot.config import Config
-from bot.logger import logger, error_handler
+from bot.logger import error_handler
+import re
 
 
 router = Router()
@@ -33,7 +35,7 @@ async def start_loop(message: Message, state: FSMContext):
 async def registration(message: Message, state: FSMContext):
     await state.update_data(fullname=message.text)
     register_data = await state.get_data()
-    if len((register_data["fullname"]).split(" "))==3:
+    if re.match(r"^[А-ЯЁа-яёA-Za-z]+(?:-[А-ЯЁа-яёA-Za-z]+)?\s[А-ЯЁа-яёA-Za-z]+(?:-[А-ЯЁа-яёA-Za-z]+)?\s[А-ЯЁа-яёA-Za-z]+(?:-[А-ЯЁа-яёA-Za-z]+)?$", message.text):
         lastname, firstname, middlename = (register_data["fullname"]).split(" ")
         if await db.is_register(firstname, middlename, lastname):
             await db.update_user_id(message.from_user.id, firstname, middlename, lastname)
@@ -50,6 +52,12 @@ async def registration(message: Message, state: FSMContext):
 @error_handler
 @router.message(F.text == "Заполнить отчёты")
 async def chouse_shift(message: Message, state: FSMContext):
+    pass
+
+
+@error_handler
+@router.callback_query(F.data == 'inline_callback')
+async def callback_func(callback_query: CallbackQuery):
     pass
 
 

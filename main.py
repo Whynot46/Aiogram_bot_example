@@ -5,7 +5,7 @@ from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from apscheduler.triggers.cron import CronTrigger
 from bot.handlers import router, send_morning_notification, send_evening_notification
 from bot.config import Config
-from bot.database.db import init_db
+from bot.db import init_db
 from bot.services.google_api_service import update_users
 from bot.logger import logger
 
@@ -80,5 +80,5 @@ if __name__ == "__main__":
         asyncio.run(main())
     except KeyboardInterrupt:
         logger.info("Bot stopped by user.")
-    except Exception as e:
-        logger.error(f"Unexpected error: {e}", exc_info=True)
+    except Exception as error:
+        logger.error(f"Unexpected error: {error}", exc_info=True)

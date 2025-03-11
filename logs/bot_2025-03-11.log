@@ -11,3 +11,116 @@
 2025-03-11 15:53:46,914 - bot.logger - INFO - Webhook deleted. Starting polling...
 2025-03-11 15:53:46,914 - aiogram.dispatcher - INFO - Start polling
 2025-03-11 15:53:46,993 - aiogram.dispatcher - INFO - Run polling for bot @test_routeam_rate_bot id=7868107483 - 'Тестовая крыса из Routeam'
+2025-03-11 18:40:44,704 - bot.logger - ERROR - Аутентификация Service Account: expected str, bytes or os.PathLike object, not NoneType
+Traceback (most recent call last):
+  File "c:\Users\User\Documents\GitHub\Aiogram_bot_example\bot\services\google_api_service.py", line 14, in <module>
+    creds_service = ServiceAccountCredentials.from_json_keyfile_name(Config.GOOGLE_CREDENTIALS_PATH, scopes=Config.GOOGLE_SCOPES).authorize(httplib2.Http())
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Documents\GitHub\Aiogram_bot_example\.venv\Lib\site-packages\oauth2client\service_account.py", line 219, in from_json_keyfile_name
+    with open(filename, 'r') as file_obj:
+         ^^^^^^^^^^^^^^^^^^^
+TypeError: expected str, bytes or os.PathLike object, not NoneType
+2025-03-11 18:40:44,704 - bot.logger - ERROR - Bot error: Token is invalid! It must be 'str' type instead of <class 'NoneType'> type.
+Traceback (most recent call last):
+  File "c:\Users\User\Documents\GitHub\Aiogram_bot_example\main.py", line 16, in main
+    bot = Bot(token=Config.TELEGRAM_TOKEN)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Documents\GitHub\Aiogram_bot_example\.venv\Lib\site-packages\aiogram\client\bot.py", line 286, in __init__
+    validate_token(token)
+  File "C:\Users\User\Documents\GitHub\Aiogram_bot_example\.venv\Lib\site-packages\aiogram\utils\token.py", line 17, in validate_token
+    raise TokenValidationError(
+aiogram.utils.token.TokenValidationError: Token is invalid! It must be 'str' type instead of <class 'NoneType'> type.
+2025-03-11 18:40:44,715 - bot.logger - INFO - Shutting down the bot...
+2025-03-11 18:40:44,715 - bot.logger - ERROR - Unexpected error: cannot access local variable 'scheduler' where it is not associated with a value
+Traceback (most recent call last):
+  File "c:\Users\User\Documents\GitHub\Aiogram_bot_example\main.py", line 16, in main
+    bot = Bot(token=Config.TELEGRAM_TOKEN)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Documents\GitHub\Aiogram_bot_example\.venv\Lib\site-packages\aiogram\client\bot.py", line 286, in __init__
+    validate_token(token)
+  File "C:\Users\User\Documents\GitHub\Aiogram_bot_example\.venv\Lib\site-packages\aiogram\utils\token.py", line 17, in validate_token
+    raise TokenValidationError(
+aiogram.utils.token.TokenValidationError: Token is invalid! It must be 'str' type instead of <class 'NoneType'> type.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\User\Documents\GitHub\Aiogram_bot_example\main.py", line 80, in <module>
+    asyncio.run(main())
+  File "c:\Users\User\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "c:\Users\User\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\User\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 650, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\User\Documents\GitHub\Aiogram_bot_example\main.py", line 68, in main
+    if scheduler.running:
+       ^^^^^^^^^
+UnboundLocalError: cannot access local variable 'scheduler' where it is not associated with a value
+2025-03-11 18:42:44,968 - bot.logger - ERROR - Аутентификация Service Account: expected str, bytes or os.PathLike object, not NoneType
+Traceback (most recent call last):
+  File "c:\Users\User\Documents\GitHub\Aiogram_bot_example\bot\services\google_api_service.py", line 14, in <module>
+    creds_service = ServiceAccountCredentials.from_json_keyfile_name(Config.GOOGLE_CREDENTIALS_PATH, scopes=Config.GOOGLE_SCOPES).authorize(httplib2.Http())
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Documents\GitHub\Aiogram_bot_example\.venv\Lib\site-packages\oauth2client\service_account.py", line 219, in from_json_keyfile_name
+    with open(filename, 'r') as file_obj:
+         ^^^^^^^^^^^^^^^^^^^
+TypeError: expected str, bytes or os.PathLike object, not NoneType
+2025-03-11 18:42:44,970 - bot.logger - ERROR - Bot error: Token is invalid! It must be 'str' type instead of <class 'NoneType'> type.
+Traceback (most recent call last):
+  File "c:\Users\User\Documents\GitHub\Aiogram_bot_example\main.py", line 16, in main
+    bot = Bot(token=Config.TELEGRAM_TOKEN)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Documents\GitHub\Aiogram_bot_example\.venv\Lib\site-packages\aiogram\client\bot.py", line 286, in __init__
+    validate_token(token)
+  File "C:\Users\User\Documents\GitHub\Aiogram_bot_example\.venv\Lib\site-packages\aiogram\utils\token.py", line 17, in validate_token
+    raise TokenValidationError(
+aiogram.utils.token.TokenValidationError: Token is invalid! It must be 'str' type instead of <class 'NoneType'> type.
+2025-03-11 18:42:44,973 - bot.logger - INFO - Shutting down the bot...
+2025-03-11 18:42:44,973 - bot.logger - ERROR - Unexpected error: cannot access local variable 'scheduler' where it is not associated with a value
+Traceback (most recent call last):
+  File "c:\Users\User\Documents\GitHub\Aiogram_bot_example\main.py", line 16, in main
+    bot = Bot(token=Config.TELEGRAM_TOKEN)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\User\Documents\GitHub\Aiogram_bot_example\.venv\Lib\site-packages\aiogram\client\bot.py", line 286, in __init__
+    validate_token(token)
+  File "C:\Users\User\Documents\GitHub\Aiogram_bot_example\.venv\Lib\site-packages\aiogram\utils\token.py", line 17, in validate_token
+    raise TokenValidationError(
+aiogram.utils.token.TokenValidationError: Token is invalid! It must be 'str' type instead of <class 'NoneType'> type.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\User\Documents\GitHub\Aiogram_bot_example\main.py", line 80, in <module>
+    asyncio.run(main())
+  File "c:\Users\User\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "c:\Users\User\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\User\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 650, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\User\Documents\GitHub\Aiogram_bot_example\main.py", line 68, in main
+    if scheduler.running:
+       ^^^^^^^^^
+UnboundLocalError: cannot access local variable 'scheduler' where it is not associated with a value
+2025-03-11 18:44:53,603 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-03-11 18:44:53,610 - googleapiclient.discovery_cache - INFO - file_cache is only supported with oauth2client<4.0.0
+2025-03-11 18:44:53,637 - bot.logger - INFO - Database initialized successfully.
+2025-03-11 18:44:53,644 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-03-11 18:44:53,645 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-03-11 18:44:53,645 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-03-11 18:44:53,646 - apscheduler.scheduler - INFO - Added job "Morning Notification" to job store "default"
+2025-03-11 18:44:53,646 - apscheduler.scheduler - INFO - Added job "Evening Notification" to job store "default"
+2025-03-11 18:44:53,646 - apscheduler.scheduler - INFO - Added job "Update Users" to job store "default"
+2025-03-11 18:44:53,646 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-11 18:44:53,646 - bot.logger - INFO - Scheduler started successfully.
+2025-03-11 18:44:53,646 - bot.logger - INFO - Router included successfully.
+2025-03-11 18:44:53,929 - bot.logger - INFO - Webhook deleted. Starting polling...
+2025-03-11 18:44:53,929 - aiogram.dispatcher - INFO - Start polling
+2025-03-11 18:44:54,005 - aiogram.dispatcher - INFO - Run polling for bot @road_construction_reports_bot id=7955637851 - 'Тестовый отчет руководителю дорожно-строительной фирмы'
