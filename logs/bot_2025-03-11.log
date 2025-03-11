@@ -1,0 +1,13 @@
+2025-03-11 15:53:46,675 - bot.logger - INFO - Database initialized successfully.
+2025-03-11 15:53:46,677 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-03-11 15:53:46,678 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-03-11 15:53:46,678 - apscheduler.scheduler - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2025-03-11 15:53:46,678 - apscheduler.scheduler - INFO - Added job "Morning Notification" to job store "default"
+2025-03-11 15:53:46,679 - apscheduler.scheduler - INFO - Added job "Evening Notification" to job store "default"
+2025-03-11 15:53:46,679 - apscheduler.scheduler - INFO - Added job "Update Users" to job store "default"
+2025-03-11 15:53:46,679 - apscheduler.scheduler - INFO - Scheduler started
+2025-03-11 15:53:46,679 - bot.logger - INFO - Scheduler started successfully.
+2025-03-11 15:53:46,679 - bot.logger - INFO - Router included successfully.
+2025-03-11 15:53:46,914 - bot.logger - INFO - Webhook deleted. Starting polling...
+2025-03-11 15:53:46,914 - aiogram.dispatcher - INFO - Start polling
+2025-03-11 15:53:46,993 - aiogram.dispatcher - INFO - Run polling for bot @test_routeam_rate_bot id=7868107483 - 'Тестовая крыса из Routeam'
